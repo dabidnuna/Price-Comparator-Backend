@@ -43,6 +43,8 @@ A Spring Boot REST API
 # clone the repo
 https://github.com/dabidnuna/Price-Comparator-Backend.git
 
+# I used PostgreSQL for the database, so edit the password in application.properties to match your database
+
 # navigate into the project
 cd Price-Comparator-Backend
 
@@ -81,6 +83,25 @@ ro.tuc.ds2020
 ├── services            # Business logic and alert triggers
 ├── PriceComparatorApp  # Main application class
 ```
+
+---
+##Architecture
+
+This project follows a clean, modular **3-layer architecture**:
+
+- **Controller Layer**: Exposes REST API endpoints and handles HTTP requests/responses.
+- **Service Layer**: Contains business logic such as:
+  - Optimizing shopping baskets
+  - Triggering alerts
+  - Filtering discounts or price history
+- **Repository Layer**: Abstracts access to the database using Spring Data JPA.
+- **Entity Layer**: Defines the data model stored in the database (Product, PriceEntry, Discount, etc.).
+- **DTO Layer**: Used for input/output objects to keep API and database cleanly separated.
+
+The project is designed to be:
+- Extensible (e.g. for authentication, scheduled jobs)
+- Testable (each layer can be tested independently)
+- Maintainable (clear separation of concerns)
 
 ---
 
