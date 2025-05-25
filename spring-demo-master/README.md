@@ -121,18 +121,18 @@ GET /api/recommendations/better-alternatives?productId=P001
 ```
 
 ### 6. Custom Price Alert
-## 6.1. Create Price Alert
+##### 6.1. Create Price Alert
 ```http
 POST /api/alerts
 ```
 ```json
 {
   "productId": "P001",
-  "userEmail": "john@example.com",
+  "userEmail": "david@example.com",
   "targetPrice": 7.50
 }
 ```
-## 6.2. Add new price for the product
+#### 6.2. Add new price for the product
 ```http
 POST http://localhost:8080/api/prices/add
 ```
@@ -145,7 +145,7 @@ POST http://localhost:8080/api/prices/add
   "currency": "RON"
 }
 ```
-## 6.3. Check Triggered Alerts
+#### 6.3. Check Triggered Alerts
 ```http
 GET /api/alerts/triggered
 ```
