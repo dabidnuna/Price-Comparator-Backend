@@ -85,7 +85,7 @@ ro.tuc.ds2020
 ```
 
 ---
-##Architecture
+## Architecture
 
 This project follows a clean, modular **3-layer architecture**:
 
